@@ -12,35 +12,41 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'))
+client.events = new Discord.Collection();
 
-for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
+['command_handler', 'event_handler'].forEach(handler => {
+    require(`.handlers/${handler}`)(client, Discord);
+})
 
-    client.commands.set(command.name, command);
-}
+//const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'))
 
-client.once('ready', () => {
+//for (const file of commandFiles) {
+//    const command = require(`./commands/${file}`);
 
-    console.log(`${client.user.tag} has logged in!`);
+//    client.commands.set(command.name, command);
+//}
 
-});
+//client.once('ready', () => {
 
-client.on('message', message => {
+//    console.log(`${client.user.tag} has logged in!`);
 
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+//});
 
-    const args = message.content.slice(prefix.length).split(/ +/);
+//client.on('message', message => {
 
-    const command = args.shift().toLowerCase();
+//    if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-    if (command === 'ping') {
-        client.commands.get('test').execute(message, args);
+//    const args = message.content.slice(prefix.length).split(/ +/);
 
-    } else if (command === 'youtube') {
-        client.commands.get('youtube').execute(message, args);
-    }
+//    const command = args.shift().toLowerCase();
 
-});
+//    if (command === 'ping') {
+//        client.commands.get('test').execute(message, args);
+
+//    } else if (command === 'youtube') {
+//        client.commands.get('youtube').execute(message, args);
+//    }
+
+//});
 
 client.login(token);
