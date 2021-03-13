@@ -1,7 +1,7 @@
 {
-  "name": "basic-discord-bot",
+  "name": "apollo",
   "version": "1.0.0",
-  "description": "Just a basic discord bot!",
+  "description": "Your discord bot!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "Nuno Gonçalves",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
   }
 }
