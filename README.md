@@ -18,7 +18,5 @@ Here are some resources to help get you started: https://discordpy.readthedocs.i
 Now you xcan play around with commands.
 
 Here is a list of the available commands:
--ping 
-(The bot will answer with pong!)
 -youtube
 (The bot will send you a youtube link. Tip: You can change the youtube link. Go to the bot's folder and open commands folder. Open the file "youtube.js" in a text editor and replace the youtube link with your channel's youtube link, for example. Restart the bot and you're ready to go!)
