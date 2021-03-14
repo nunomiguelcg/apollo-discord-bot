@@ -20,3 +20,12 @@ Now you xcan play around with commands.
 Here is a list of the available commands:
 -youtube
 (The bot will send you a youtube link. Tip: You can change the youtube link. Go to the bot's folder and open commands folder. Open the file "youtube.js" in a text editor and replace the youtube link with your channel's youtube link, for example. Restart the bot and you're ready to go!)
+-kick @user
+(The bot will kick the mentioned user. The bot does nor yet check for those who have admin permissions, so, theoriticly anyone can kick anyone.)
+-ban @user
+(The bot will ban the mentioned user. The bot does nor yet check for those who have admin permissions, so, theoriticly anyone can ban anyone.)
+
+Features that will be coming soon:
+Mutting commands.
+Message clearing commands.
+Permission checker. The bot will check for those who have permissions for kicking/banning/mutting/clearing messages.
